@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+    <!--<Appenders>
+        <Kafka name="kafka" topic="log-output">
+            <PatternLayout pattern="%date %message"/>
+            <Property name="bootstrap.servers">localhost:9092</Property>
+        </Kafka>
+    </Appenders>
+    -->
+
+    <Loggers>
+        <!-- LOG everything at INFO level -->
+        <Root level="info">
+            <AppenderRef ref="Console" />
+            <AppenderRef ref="RollingFile" />
+        </Root>
+
+        <!-- LOG "com.baeldung*" at TRACE level -->
+        <Logger name="cn.lee" level="trace"></Logger>
+    </Loggers>
+
+</Configuration>

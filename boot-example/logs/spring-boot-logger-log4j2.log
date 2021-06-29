@@ -1,0 +1,20 @@
+2021-04-28 17:22:48,334 INFO o.s.b.StartupInfoLogger [main] Starting BootApplication using Java 1.8.0_281 on 3krivc004 with PID 24364 (/Users/LIX492/dev/lee-skill-parent/boot-example/target/classes started by LIX492 in /Users/LIX492/dev/lee-skill-parent/boot-example)
+2021-04-28 17:22:48,342 DEBUG o.s.b.StartupInfoLogger [main] Running with Spring Boot v2.4.5, Spring v5.3.6
+2021-04-28 17:22:48,343 INFO o.s.b.SpringApplication [main] The following profiles are active: dev
+2021-04-28 17:22:49,005 INFO o.e.j.u.l.Log [main] Logging initialized @2096ms to org.eclipse.jetty.util.log.Slf4jLog
+2021-04-28 17:22:49,116 INFO o.s.b.w.e.j.JettyServletWebServerFactory [main] Server initialized with port: 9090
+2021-04-28 17:22:49,119 INFO o.e.j.s.Server [main] jetty-9.4.39.v20210325; built: 2021-03-25T14:42:11.471Z; git: 9fc7ca5a922f2a37b84ec9dbc26a5168cee7e667; jvm 1.8.0_281-b09
+2021-04-28 17:22:49,139 INFO o.e.j.s.h.ContextHandler$Context [main] Initializing Spring embedded WebApplicationContext
+2021-04-28 17:22:49,139 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 738 ms
+2021-04-28 17:22:49,196 INFO o.e.j.s.s.DefaultSessionIdManager [main] DefaultSessionIdManager workerName=node0
+2021-04-28 17:22:49,196 INFO o.e.j.s.s.DefaultSessionIdManager [main] No SessionScavenger set, using defaults
+2021-04-28 17:22:49,197 INFO o.e.j.s.s.HouseKeeper [main] node0 Scavenging every 660000ms
+2021-04-28 17:22:49,204 INFO o.e.j.s.h.ContextHandler [main] Started o.s.b.w.e.j.JettyEmbeddedWebAppContext@3ff54f3d{application,/,[file:///private/var/folders/bf/2cn6_8ls5mvchfz0wxtp80vr0000gr/T/jetty-docbase.9090.5536122436327691938/],AVAILABLE}
+2021-04-28 17:22:49,204 INFO o.e.j.s.Server [main] Started @2296ms
+2021-04-28 17:22:49,410 INFO o.s.s.c.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-28 17:22:49,625 INFO o.e.j.s.h.ContextHandler$Context [main] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-04-28 17:22:49,625 INFO o.s.w.s.FrameworkServlet [main] Initializing Servlet 'dispatcherServlet'
+2021-04-28 17:22:49,627 INFO o.s.w.s.FrameworkServlet [main] Completed initialization in 1 ms
+2021-04-28 17:22:49,695 INFO o.e.j.s.AbstractConnector [main] Started ServerConnector@3456558{HTTP/1.1, (http/1.1)}{0.0.0.0:9090}
+2021-04-28 17:22:49,696 INFO o.s.b.w.e.j.JettyWebServer [main] Jetty started on port(s) 9090 (http/1.1) with context path '/'
+2021-04-28 17:22:49,703 INFO o.s.b.StartupInfoLogger [main] Started BootApplication in 1.83 seconds (JVM running for 2.795)
