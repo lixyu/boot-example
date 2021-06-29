@@ -5,5 +5,5 @@ package cn.lee.boot.pattern.adapter;
  * 2021/6/9
  */
 public interface MediaPlayer {
-    void play(String audioType,String fileName);
+    void play(String audioType, String fileName);
 }

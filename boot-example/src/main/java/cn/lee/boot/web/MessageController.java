@@ -17,7 +17,7 @@ public class MessageController {
     private final MessageProvider messageProvider;
 
     @GetMapping("/send/hello")
-    public ResponseEntity<String> sendHello(){
+    public ResponseEntity<String> sendHello() {
 
         messageProvider.sendHello();
         return ResponseEntity.ok("LEE");

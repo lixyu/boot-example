@@ -16,10 +16,10 @@ public class MessageProvider {
 
     private final StreamBridge streamBridge;
 
-    public void sendHello(){
-        String message= UUID.randomUUID().toString();
+    public void sendHello() {
+        String message = UUID.randomUUID().toString();
 
-        streamBridge.send("sendHello-in-0",message);
-        System.out.println("*************send message:"+message);
+        streamBridge.send("sendHello-in-0", message);
+        System.out.println("*************send message:" + message);
     }
 }

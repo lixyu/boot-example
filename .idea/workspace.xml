@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="e2d5c1da-5891-4a2d-bd0f-5e1bf8962789" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/HELP.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mvnw.cmd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/boot-example/src/main/java/cn/lee/boot/example/StringExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/boot-example/src/main/java/cn/lee/boot/example/StringExample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/boot-example/src/main/java/cn/lee/boot/example/regex/RegexTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/boot-example/src/main/java/cn/lee/boot/example/regex/RegexTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/boot-example/src/main/java/cn/lee/boot/interceptor/ControllerInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/boot-example/src/main/java/cn/lee/boot/interceptor/ControllerInterceptor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/boot-example/src/main/java/cn/lee/boot/pattern/adapter/AudioPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/boot-example/src/main/java/cn/lee/boot/pattern/adapter/AudioPlayer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/boot-example/src/main/java/cn/lee/boot/pattern/adapter/MediaAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/boot-example/src/main/java/cn/lee/boot/pattern/adapter/MediaAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/boot-example/src/main/java/cn/lee/boot/pattern/adapter/MediaPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/boot-example/src/main/java/cn/lee/boot/pattern/adapter/MediaPlayer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/boot-example/src/main/java/cn/lee/boot/pattern/adapter/Mp4Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/boot-example/src/main/java/cn/lee/boot/pattern/adapter/Mp4Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/boot-example/src/main/java/cn/lee/boot/pattern/adapter/VlcPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/boot-example/src/main/java/cn/lee/boot/pattern/adapter/VlcPlayer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/boot-example/src/main/java/cn/lee/boot/service/MessageConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/boot-example/src/main/java/cn/lee/boot/service/MessageConsumer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/boot-example/src/main/java/cn/lee/boot/service/MessageProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/boot-example/src/main/java/cn/lee/boot/service/MessageProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/boot-example/src/main/java/cn/lee/boot/web/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/boot-example/src/main/java/cn/lee/boot/web/HelloController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/boot-example/src/main/java/cn/lee/boot/web/MessageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/boot-example/src/main/java/cn/lee/boot/web/MessageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/boot-example/src/main/resources/log4j2-spring.xml" beforeDir="false" afterPath="$PROJECT_DIR$/boot-example/src/main/resources/log4j2-spring.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1ubyvAHJltJzEeslXF2NCVlGbwk" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.BootApplication">
+    <configuration name="BootApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="boot" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="cn.lee.boot.BootApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ExmapleMybatisPlusApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="exmaple-mysql" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.lee.exmaple.ExmapleMybatisPlusApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Spring Boot" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+            </expand>
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e2d5c1da-5891-4a2d-bd0f-5e1bf8962789" name="Default Changelist" comment="" />
+      <created>1624948810862</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1624948810862</updated>
+      <workItem from="1624948812905" duration="2653000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="361" y="372" key="new project wizard" timestamp="1624950913480">
+      <screen x="0" y="25" width="1721" height="1095" />
+    </state>
+    <state x="361" y="372" key="new project wizard/0.25.1721.1095@0.25.1721.1095" timestamp="1624950913480" />
+  </component>
+  <component name="se.expertsystem.intellij.aop.aspectj.AspectJProjectComponent">
+    <setting name="isActivated" value="false" />
+  </component>
+</project>

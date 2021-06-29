@@ -13,9 +13,9 @@ import java.util.function.Consumer;
 public class MessageConsumer {
 
     @Bean
-    Consumer<String> sendHello(){
-        return str->{
-            System.out.println("消费者收到消息:"+str);
+    Consumer<String> sendHello() {
+        return str -> {
+            System.out.println("消费者收到消息:" + str);
         };
     }
 }

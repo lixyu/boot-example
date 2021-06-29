@@ -15,8 +15,8 @@ import org.springframework.web.bind.annotation.RestController;
 public class HelloController {
 
     @GetMapping("/hello/{world}")
-    public ResponseEntity<String> hello(@PathVariable String world){
-        String str="Hello,"+world;
+    public ResponseEntity<String> hello(@PathVariable String world) {
+        String str = "Hello," + world;
         return ResponseEntity.ok(str);
 
     }

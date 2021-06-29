@@ -19,10 +19,11 @@ import java.util.Arrays;
 public class ControllerInterceptor {
     @Pointcut("execution(* cn.lee.boot.web.*.*(..))")
     public void entranceAspect() {
-        
+
     }
+
     @Around("entranceAspect()")
-    public Object handleController(ProceedingJoinPoint proPoint) throws Throwable  {
+    public Object handleController(ProceedingJoinPoint proPoint) throws Throwable {
         /** *  获取请求类，方法，参数 */
         String className = proPoint.getSignature().getDeclaringTypeName();
         String methodName = proPoint.getSignature().getName();
