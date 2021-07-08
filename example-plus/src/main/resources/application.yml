@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: example-plus
+  profiles:
+    include: db
+  redis:
+    host: localhost
+    port: 6379
+  rabbitmq:
+    virtual-host: /
+    username: guest
+    password: guest
+    host: localhost
+    port: 5672
+---
+spring:
+  cloud:
+    stream:
+      bindings:
+        bookOrderInput:
+          destination: book.order   #destination+group组成queue的名字,例如:book.order.queue
+          group: queue
+        bookOrderOutput:
+          destination: book.order
