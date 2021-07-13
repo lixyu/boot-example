@@ -1,8 +1,10 @@
+
 spring:
   application:
-    name: example-plus
+    name: example
   profiles:
-    include: db
+    include: db,log
+    active: dev
   redis:
     host: localhost
     port: 6379
@@ -12,6 +14,8 @@ spring:
     password: guest
     host: localhost
     port: 5672
+server:
+  port: 8082
 ---
 spring:
   cloud:

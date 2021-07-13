@@ -11,4 +11,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class InventoryDao extends ServiceImpl<InventoryMapper, Inventory> {
 
+    public Inventory findByGoodId(Long goodId){
+        return baseMapper.findByGoodId(goodId);
+    }
 }

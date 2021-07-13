@@ -40,7 +40,7 @@ mybatis-plus:
     cache-enabled: false
     jdbc-type-for-null: null
     # 启动mybatis本身的log日志,方式一
-    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    #log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
 # 启动mybatis打印sql,方式二
 #logging:
 #  level:

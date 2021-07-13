@@ -11,14 +11,14 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.segments.MergeSegments;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import net.dreamlu.mica.core.utils.NumberUtil;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.Cacheable;
-import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.StringRedisTemplate;
-import org.springframework.integration.core.Pausable;
-import org.springframework.messaging.Message;
 import org.springframework.messaging.support.MessageBuilder;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -32,6 +32,7 @@ import java.util.concurrent.TimeUnit;
 public class InventoryService {
     private final InventoryDao inventoryDao;
     private final StringRedisTemplate stringRedisTemplate;
+    private final DistributedLock distributedLock;
     private final RabbitChannel rabbitChannel;
 
     public Long save(Inventory inventory){
@@ -40,10 +41,13 @@ public class InventoryService {
         return inventory.getId();
     }
 
+    @Transactional
     public void updateInventory(Long goodId,Integer count){
         Wrapper<Inventory> wrapper=new QueryWrapper(new Inventory(goodId));
-        Inventory inventory=inventoryDao.getOne(wrapper);
+        Inventory inventory=inventoryDao.findByGoodId(goodId);
+        log.info("真正开始减库存-->{}",inventory.getNum()-count);
         inventory.setNum(inventory.getNum()-count);
+        log.info("减库存结果-->{}",inventory.getNum());
         inventoryDao.updateById(inventory);
     }
 
@@ -68,7 +72,7 @@ public class InventoryService {
     }
 
 
-    public Integer preLoadInventory(Long goodId){
+    public synchronized Integer preLoadInventory(Long goodId){
         Wrapper<Inventory> queryWrapper= new QueryWrapper(new Inventory(goodId));
 
         Inventory inventory=inventoryDao.getOne(queryWrapper);
@@ -78,17 +82,41 @@ public class InventoryService {
         return inventory.getNum();
     }
 
-    public Long preReduceInventory(Long goodId,Integer count){
+    public  Long preReduceInventory(Long goodId,Integer count){
+        String lockKey=null;
+        Long num=0L;
         String key=Constants.GOOD_INVENTORY_CACHE_PRE+goodId;
-        String current=stringRedisTemplate.opsForValue().get(key);
-        log.info("商品:{},当前库存-->{}",goodId,current);
-        Long num=stringRedisTemplate.opsForValue().decrement(key,count);
-        if(num<=0){
-            throw new BusinessException("该商品已经售光了");
+        try {
+
+            lockKey=distributedLock.tryLock(key);
+            if(StringUtils.isBlank(lockKey)){
+                //log.error("加锁失败");
+                return num;
+            }
+            if(!stringRedisTemplate.hasKey(key)){
+                this.preLoadInventory(goodId);
+            }
+            String current=stringRedisTemplate.opsForValue().get(key);
+            log.info("商品:{},当前库存-->{}",goodId,current);
+            num=NumberUtil.toLong(current);
+            if(num<=0){
+                //log.error("该商品已经售光了,当前库存:{}",num);
+                return num;
+            }
+
+            Long after=stringRedisTemplate.opsForValue().decrement(key,count);
+            if(after<0){
+                //log.error("该商品已经售光了,减库存后:{}",after);
+                return after;
+            }
+            //log.info("商品:{},预减库存-->{}",goodId,after);
+            rabbitChannel.bookOrderOutput().send(MessageBuilder.withPayload(new BookOrderDTO(goodId,count)).build());
+
+        }catch (Exception e){
+            log.error("报错了",e);
+        }finally {
+            distributedLock.unLock(lockKey);
         }
-        stringRedisTemplate.opsForValue().set(key,String.valueOf(num));
-        log.info("商品:{},预减库存-->{}",goodId,num);
-        rabbitChannel.bookOrderOutput().send(MessageBuilder.withPayload(new BookOrderDTO(goodId,count)).build());
         return num;
     }
 
